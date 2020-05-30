@@ -7,3 +7,5 @@
 ![聊天](https://raw.githubusercontent.com/MuGongziya/Chat-robot/master/images/liaotian.png)  
 大概就是这个样子，此机器人接口没有配额限制和并发限制  
 所以有时候使用时会发生系统超时的情况，属于正常现象，重新调用即可  
+具体的实现思路就是，前台发送一句话，然后由ajax传入到后台进行调用、查询  
+然后后台再将获取到的json信息进行解析再传到前台显示。
