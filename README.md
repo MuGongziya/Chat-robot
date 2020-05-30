@@ -1,2 +1,1 @@
-# php-ajax-
-php+ajax实现聊天机器人
+PHP+AJAX 实现自动聊天机器人
