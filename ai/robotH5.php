@@ -6,7 +6,25 @@
     <title>机器人</title>
 </head>
 <link rel="stylesheet" href="css/styles.css">
+<script src="../layui/layui/layui.js"></script>
+<link rel="stylesheet" href="../layui/layui/css/layui.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+    .ltTitle{
+        position: sticky;
+        top: 0;
+        height: 50px;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .ltTitleName{
+        font-size: 18px;
+    }
+</style>
 <script type="text/javascript">
     function question(){
         var Words = document.getElementById("words");
@@ -16,7 +34,10 @@
             //定义空字符串
             if(TalkWords.value == ""){
                 // 消息为空时弹窗
-                alert("消息不能为空");
+                layui.use('layer', function(){
+                    layer.msg('内容不能为空！', function () {
+                    });
+                });
                 return;
             }
             if (window.XMLHttpRequest)
@@ -87,7 +108,14 @@
         background:pink;
         margin:10px auto 0;
         overflow:auto;"
-             id="words" ></div>
+             id="words" >
+            <div class="ltTitle">
+                <span class="ltTitleName">慕公子
+                    <span class="layui-icon  layui-icon-release"></span>
+                </span>
+                <span class="layui-badge">对方6G在线</span>
+            </div>
+        </div>
 
         <div class="inpH5">
 
